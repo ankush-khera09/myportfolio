@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/de7db8bc9e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtIITd8ipPMoXbPwDLZdKoKZO4SP_pXJ8&callback=initMap"
+    ></script>
+    <link rel="stylesheet" href="index copy.css" />
+
+    <title>My Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/img/faviconimg.png">
+  </head>
+  <body>
+    <header>
+      <!-- NAVBAR -->
+
+      <div id="navbar">
+        <div id="navitems">
+          <div id="navbrand">
+            <h2>Personal Portfolio</h2>
+          </div>
+
+          <div id="navlist">
+            <ul id="navul">
+              <li class="navulitem"><a href="#">Home</a></li>
+              <li class="navulitem"><a href="#about-2">About</a></li>
+              <li class="navulitem"><a href="#skills">Skills</a></li>
+              <li class="navulitem">
+                <a href="#qualification">Qualification</a>
+              </li>
+              <li class="navulitem"><a href="#projects">Projects</a></li>
+              <li class="navulitem" id="navcont">
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+            <button id="hamb" onclick="opensidebar()">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar" id="sidebarid">
+        <div id="sideclose" onclick="closesidebar()">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+
+        <div id="sidenav">
+          <ul id="sidenavul">
+            <a href="#"><li class="sidenavulitem">Home</li></a>
+            <a href="#about-2"><li class="sidenavulitem">About</li></a>
+            <a href="#skills"><li class="sidenavulitem">Skills</li></a>
+            <a href="#qualification"
+              ><li class="sidenavulitem">Qualification</li></a
+            >
+            <a href="#projects"><li class="sidenavulitem">Projects</li></a>
+            <a href="#contact"
+              ><li class="sidenavulitem" id="navcont">Contact</li></a
+            >
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="about-1">
+        <div id="abtdiv">
+          <!-- <div id="abtdivin"></div> -->
+          <div class="abtdivchild" id="abtsocial">
+            <div id="socfix">
+              <ul class="abtsocul">
+                <li class="abtsocicons">
+                  <a
+                    href="https://www.linkedin.com/in/ankushkhera09"
+                    target="_blank"
+                    ><i class="fa-brands fa-linkedin-in"></i
+                  ></a>
+                </li>
+                <li class="abtsocicons">
+                  <a href=""><i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li class="abtsocicons">
+                  <a href=""><i class="fa-brands fa-twitter"></i></a>
+                </li>
+                <li class="abtsocicons">
+                  <a href=""><i class="fa-brands fa-github"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="abtdivchild" id="abtintro">
+            <div id="abtintro-info">
+              <h2 id="iam">Hi! I am</h2>
+              <h1 id="ak">Ankush Khera</h1>
+              <div><h2 id="fsd">Full Stack Developer</h2></div>
+              <a
+                href="https://drive.google.com/u/0/uc?id=1wHO8euEvh2ZZ3akM2ZZN_hwgb-TXw-y-&export=download"
+                target="_blank"
+                ><button id="cvbut">Download Resume</button></a
+              >
+            </div>
+          </div>
+
+          <div class="abtdivchild" id="abtpic">
+            <div id="abtpicdp">
+              <img src="img/dp.png" alt="profilePic" />
+            </div>
+          </div>
+        </div>
+
+        <div id="abtpill">
+          <div id="abtpill-1" class="abtpillin">
+            <!-- <div class="abtpillicon"> -->
+            <i class="abtpill-icon fa-solid fa-id-badge"></i>
+            <!-- </div> -->
+            <div class="abtpilldes">
+              <span style="font-size: 120%; color: var(--color-darkblue)">
+                LeetCode
+              </span>
+              <span style="color: var(--color-lightblue)">200+ solved</span>
+            </div>
+          </div>
+
+          <div class="abtpill-divider"></div>
+
+          <div id="abtpill-2" class="abtpillin">
+            <i class="abtpill-icon fa-solid fa-laptop-code"></i>
+            <div class="abtpilldes">
+              <span style="font-size: 120%; color: var(--color-darkblue)">
+                Gfg
+              </span>
+              <span style="color: var(--color-lightblue)">200+ score</span>
+            </div>
+          </div>
+
+          <div class="abtpill-divider"></div>
+
+          <div id="abtpill-3" class="abtpillin">
+            <!-- <div class="abtpillicon"> -->
+            <i class="abtpill-icon fa-solid fa-award"></i>
+            <!-- </div> -->
+            <div class="abtpilldes">
+              <span style="font-size: 120%; color: var(--color-darkblue)">
+                Conference Paper
+              </span>
+              <span style="color: var(--color-lightblue)">Published</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about-2">
+        <div id="aboutme">
+          <div id="abtmepic">
+            <div id="mepic">
+              <img src="img/dp.png" alt="dp" />
+            </div>
+          </div>
+
+          <div id="abtmeintro">
+            <div id="myintro">
+              <h2 style="color: var(--color-lightblue)">My Intro</h2>
+              <h1
+                style="
+                  font-size: 250%;
+                  line-height: 0;
+                  color: var(--color-darkblue);
+                "
+              >
+                About Me
+              </h1>
+              <div class="image-container">
+                <img src="img/dp.png" alt="dp" />
+              </div>
+              <p style="text-align: justify">
+                A third year Computer Science Engineering Student enthusiastic about learning new technologies and looking for an opportunity to enhance my skills by working with like-minded people. I'm a well-organised man who
+                enjoys breaking complex problems into simpler ones and solving
+                them.
+              </p>
+            </div>
+
+            <div id="mydetails">
+              <div id="mydetque">
+                <span class="about-me-icon"
+                  ><i class="fa-solid fa-user"></i
+                ></span>
+                <span><b>Name</b></span>
+                <br />
+
+                <span class="about-me-icon"
+                  ><i class="fa-solid fa-phone"></i
+                ></span>
+                <span><b>Phone</b></span>
+                <br />
+
+                <span class="about-me-icon"
+                  ><i class="fa-solid fa-envelope"></i
+                ></span>
+                <span><b>Email</b></span>
+              </div>
+              <div id="mydetcolon">
+                <span>:</span> <br />
+                <span>:</span> <br />
+                <span>:</span>
+              </div>
+              <div id="mydetans">
+                <span>Ankush Khera</span> <br />
+                <span>+91-8982200005</span> <br />
+                <span><a href="mailto:ankushkhera09@gmail.com">ankushkhera09@gmail.com</a></span>
+              </div>
+            </div>
+
+            <div id="myinterests">
+              <h2 style="color: var(--color-darkblue)">My Interests</h2>
+            </div>
+
+            <div id="myintin">
+              <div>
+                <i class="fa-solid fa-video"></i>
+                <span>Video Editing</span>
+              </div>
+
+              <div>
+                <i class="fa-solid fa-plane-up"></i>
+                <span>Travel</span>
+              </div>
+
+              <div>
+                <i class="fa-solid fa-pen-fancy"></i>
+                <span>Writing</span>
+              </div>
+
+              <div>
+                <i class="fa-solid fa-camera"></i>
+                <span>Photography</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills">
+        <div id="skillsdiv">
+          <div id="myskills">
+            <h1><i class="fa-solid fa-user-tie"></i>&ensp;My Skills</h1>
+          </div>
+
+          <div id="skillscont">
+            <div class="skillsbar">
+              <div class="skillsbarin" style="width: 100%">
+                <div>
+                  <span>HTML</span>
+                </div>
+              </div>
+            </div>
+            <div class="skillsbar">
+              <div class="skillsbarin" style="width: 100%">
+                <div>
+                  <span>C++</span>
+                </div>
+              </div>
+            </div>
+            <div class="skillsbar">
+              <div class="skillsbarin" style="width: 100%">
+                <div>
+                  <span>CSS</span>
+                </div>
+              </div>
+            </div>
+            <div class="skillsbar">
+              <div class="skillsbarin" style="width: 90%">
+                <div>
+                  <span>Java</span>
+                </div>
+              </div>
+            </div>
+            <div class="skillsbar">
+              <div class="skillsbarin" style="width: 100%">
+                <div>
+                  <span>Javascript</span>
+                </div>
+              </div>
+            </div>
+            <div class="skillsbar">
+              <div class="skillsbarin" style="width: 90%">
+                <div>
+                  <span>Node Js</span>
+                </div>
+              </div>
+            </div>
+            <div class="skillsbar">
+              <div class="skillsbarin" style="width: 100%">
+                <div>
+                  <span>React Js</span>
+                </div>
+              </div>
+            </div>
+            <div class="skillsbar">
+              <div class="skillsbarin" style="width: 90%">
+                <div>
+                  <span>Mongo DB</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="qualification">
+        <div id="qualdiv">
+          <div id="myjour">
+            <h1><i class="fa-solid fa-list-check"></i>&ensp;My Journey</h1>
+          </div>
+
+          <div id="jourcont">
+            <div class="jourcontin">
+              <div id="jouredu" class="joureduexp">
+                <span><i class="fa-solid fa-graduation-cap"></i></span>
+                <span>Education</span>
+              </div>
+
+              <div class="eduexpcont">
+                <div class="timeline-divider">
+                  <div class="timeline-traveller">
+                    <div>
+                      <i class="fas fa-plane"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="boxcont" id="eduboxcont">
+                  <div class="eduexpbox" id="edubox1">
+                    <h3>Bachelor of Engineering (9.99 cgpa)</h3>
+                    <h4 class="organi">Chitkara University, Punjab</h4>
+                    <h4>
+                      <i class="fa-solid fa-calendar-days"></i>&emsp;2020-24
+                    </h4>
+                  </div>
+                  <div class="eduexpbox" id="edubox2">
+                    <h3>Class XII<sup>th</sup> (96.2%)</h3>
+                    <h4 class="organi">SDVM School, Panipat</h4>
+                    <h4>
+                      <i class="fa-solid fa-calendar-days"></i>&emsp;2019-20
+                    </h4>
+                  </div>
+                  <div class="eduexpbox" id="edubox3">
+                    <h3>Class X<sup>th</sup> (94.2%)</h3>
+                    <h4 class="organi">SDVM School, Panipat</h4>
+                    <h4><i class="fa-solid fa-calendar-days"></i>&emsp;2017-18</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="jourcontin">
+              <div id="jourexp" class="joureduexp">
+                <span><i class="fa-solid fa-briefcase"></i></span>
+                <span>Experience</span>
+              </div>
+
+              <div class="eduexpcont">
+                <div class="timeline-divider">
+                  <div class="timeline-traveller">
+                    <div>
+                      <i class="fas fa-plane"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="boxcont" id="expboxcont">
+                  <div class="eduexpbox" id="expbox1">
+                    <h3>Content Coordinator</h3>
+                    <h4 class="organi">IEEE CIET</h4>
+                    <h4>
+                      <i class="fa-solid fa-calendar-days"></i
+                      >&emsp;Feb-May 2022
+                    </h4>
+                  </div>
+                  <div class="eduexpbox" id="expbox2">
+                    <h3>Campus Ambassador</h3>
+                    <h4 class="organi">Coding Ninjas</h4>
+                    <h4>
+                      <i class="fa-solid fa-calendar-days"></i>&emsp;Mar-Oct 2021
+                    </h4>
+                  </div>
+                  <div class="eduexpbox" id="expbox3">
+                    <h3>Social Media Team Head</h3>
+                    <h4 class="organi">Eracost Pvt. Ltd.</h4>
+                    <h4>
+                      <i class="fa-solid fa-calendar-days"></i>&emsp;May-Sept 2021
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div id="projdiv">
+          <div id="projhead">
+            <h1><i class="fa-solid fa-file"></i>&ensp;My Projects</h1>
+          </div>
+
+          <!-- <div id="projcont"> -->
+
+          <div id="projcont">
+            <div class="projbox">
+              <div class="pboxicon">
+                <i class="fa-solid fa-calculator"></i>
+              </div>
+              <div class="pboxinfo">
+                <h2>Calculator</h2>
+                <p>
+                  Made a whole working Calculator using HTML, CSS & Javascript
+                </p>
+              </div>
+            </div>
+            <div class="projbox" id="projboxhosp">
+              <div class="pboxicon" id="projboxhospicon">
+                <i class="fa-solid fa-stethoscope"></i>
+              </div>
+              <div class="pboxinfo" id="projboxhospinfo">
+                <h2>Hospital Website</h2>
+                <p>Developed a fully responsive website for a Hospital</p>
+              </div>
+            </div>
+
+            <div class="projbox">
+              <div class="pboxicon">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div class="pboxinfo">
+                <h2>My Portfolio</h2>
+                <p>This Portfolio website using HTML, CSS & JS</p>
+              </div>
+            </div>
+            <div class="projbox projboxhid">
+              <div class="pboxicon">
+                <i class="fa-solid fa-music"></i>
+              </div>
+              <div class="pboxinfo">
+                <h2>Music Player</h2>
+                <p>
+                  Developed a fully working Music Player using HTML, CSS & JS
+                </p>
+              </div>
+            </div>
+            <div class="projbox projboxhid">
+              <div class="pboxicon">
+                <i class="fa-brands fa-android"></i>
+              </div>
+              <div class="pboxinfo">
+                <h2>Android Applications</h2>
+                <p>Developed 5+ Android Apps with more than 4k Downloads</p>
+              </div>
+            </div>
+            <div class="projbox projboxhid">
+              <div class="pboxicon">
+                <i class="fa-solid fa-cloud-rain"></i>
+              </div>
+              <div class="pboxinfo">
+                <h2>Weather Forcaster</h2>
+                <p>Developed an ios App for weather forcasting using API</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- </div> -->
+        </div>
+      </section>
+
+      <section id="contact">
+        <div id="contactdiv">
+          <div id="contactdivin">
+            <div id="contdivinin">
+              <div id="contpic-section">
+                <img src="img/contact.jpg" alt="Image" />
+              </div>
+
+              <div id="contdetails" class="lastdivs">
+                <div id="contdetailsin">
+                  <h1>Contact ME</h1>
+                  <p>Feel free to send me a message :)</p>
+
+                  <form
+                    action="https://formspree.io/f/mrgddgbv"
+                    method="POST"
+                    id="contform"
+                  >
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Your Name"
+                      class="inpbox"
+                      id="inpname"
+                      required
+                    />&emsp;<span id="regname"></span><br />
+                    <input
+                      type="text"
+                      name="email"
+                      placeholder="Your Email"
+                      class="inpbox"
+                      id="inpemail"
+                      required
+                    />&emsp;<span id="regemail"></span><br />
+                    <textarea
+                      name="message"
+                      id=""
+                      cols="30"
+                      rows="7"
+                      placeholder="Type your message here!"
+                      required
+                    ></textarea>
+                    <input
+                      type="submit"
+                      name="Send Message"
+                      id="inpbut"
+                      value="Send"
+                      onclick="email()"
+                    />
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+        <marquee direction=""><p>
+          <i class="fa-solid fa-copyright"></i>&ensp; 2022 Ankush Khera. All
+          rights reserved.
+          <!-- Thank You for visiting! -->
+        </p></marquee>
+    </footer>
+  </body>
+</html>
